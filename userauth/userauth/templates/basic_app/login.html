@@ -1,0 +1,12 @@
+{% extends 'basic_app/base.html' %}
+{% block body-block %}
+<form action="{% url 'b_app:user_login' %}" method="post">
+<!-- <form action="" method="post"> #without action also it is working in the same way then what is the purpose of action here -->
+  {% csrf_token %}
+  <label for="username">Username :</label>
+<input type="text" name="username" value="">
+  <label for="password">Password :</label>
+  <input type="password" name="password" value="">
+  <input type="submit" name="" value="Login">
+</form>
+{% endblock %}
